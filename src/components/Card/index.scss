@@ -1,0 +1,59 @@
+@import '../../assets/styles/base/variables';
+@import '../../assets/styles/base/mixins';
+
+.card-wrapper {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    // box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    cursor: pointer;
+
+    .card-cover {
+        width: 100%;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            // aspect-ratio: 1;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 20px;
+        }
+    }
+
+    .card-content {
+        padding-bottom: 10px;
+        .card-inner {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-top: 15px;
+
+            .star {
+                display: flex;
+                align-items: center;
+                gap: 3px;
+                padding: 0 7px;
+                border: 2px solid gold;
+                border-radius: 10px;
+                @include fontStyle(16px, $dark-color, 500);
+
+                .icon {
+                    color: gold;
+                }
+            }
+        }
+        span {
+            display: none;
+            @include fontStyle(15px, $dark-gray, normal);
+        }
+        h2 {
+            @include fontStyle(18px, $dark-color, 500);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}

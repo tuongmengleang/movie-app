@@ -1,0 +1,32 @@
+@import './variables';
+
+@mixin fontStyle($size: false, $color: false, $weight: false,  $lh: false) {
+    @if $size { font-size: $size; }
+    @if $color { color: $color; }
+    @if $weight { font-weight: $weight; }
+    @if $lh { line-height: $lh; }
+}
+
+// Center by absolute
+@mixin centerAbsolute() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+// Center by flex
+@mixin centerFlex() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Image Background
+@mixin bgImage($position: false, $repeat: false, $size: false, $color: transparent) {
+  @if $position { background-position: $position; }
+  @if $repeat { background-repeat: $repeat; }
+  @if $size { background-size: $size; }
+  @if $color { background-color: $color; }
+}

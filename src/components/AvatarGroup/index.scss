@@ -1,0 +1,22 @@
+.avatar-list {
+    .avatar {
+        width: 8rem;
+        height: 8rem;
+        padding: 3px;
+        background-color: rgba($color: #FFFFFF, $alpha: .8);
+        border-radius: 50%;
+
+        // transition: transform 300ms;
+        // &:hover {
+        //     transform: translateX(1.1rem);
+        // }
+
+        img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+        }
+    }
+}
